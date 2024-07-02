@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/84c1b807c4.js" crossorigin="anonymous"></script>
+    <title>Learn code.</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="nav-box">
+                <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+                <div class="menu-box">
+                    <ul class="menu-left">
+                        <li id="menu-btn"><i class="fa-solid fa-bars"></i></li>
+                        <li><a href="#">Computer</a></li>
+                        <li><a href="#">Accessory</a></li>
+                        <li><a href="#">Spar Part</a></li>
+                        <li><a href="#">Camera</a></li>
+                    </ul>
+                    <ul class="menu-right">
+                        <li id="phone-btn"><i class="fa-solid fa-phone"></i> 071 xxx xxx</li>
+                        <li id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></li>
+                        <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li id="login-btn">Login</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="overlay-menu" style="display: none;">
+                <div class="left-menu">
+                    <a href="#" class="logo2"><img src="images/logo.png" alt=""></a>
+                    <div>
+                        <a href="#">Computer</a>
+                        <a href="#">Accessory</a>
+                        <a href="#">Spar Part</a>
+                        <a href="#">Cammera</a>
+                    </div>
+                </div>
+            </div>
+            <!-- search box -->
+            <div class="search-box" style="display: none;">
+                <div class="search-input">
+                    <input type="text" placeholder="Search..." autofocus>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="close-search"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <!-- form login -->
+            <div class="overlay-login" style="display: none;">
+                <div class="form-login">
+                    <span id="close-form"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>Logincial Computer</h3>
+                    <h4>Dealer Login</h4>
+                    <form>
+                        <div>
+                            <label for="">Name</label>
+                            <input type="text" autofocus>
+                        </div>
+                        <div>
+                            <label for="">Password</label>
+                            <input type="password">
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
