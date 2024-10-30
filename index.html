@@ -1,78 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/84c1b807c4.js" crossorigin="anonymous"></script>
-    <title>Learn code.</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/84c1b807c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Lgc24</title>
+  </head>
+  <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
-
-            <div class="nav-box">
-                <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
-                <div class="menu-box">
-                    <ul class="menu-left">
-                        <li id="menu-btn"><i class="fa-solid fa-bars"></i></li>
-                        <li><a href="#">Computer</a></li>
-                        <li><a href="#">Accessory</a></li>
-                        <li><a href="#">Spar Part</a></li>
-                        <li><a href="#">Camera</a></li>
-                    </ul>
-                    <ul class="menu-right">
-                        <li id="phone-btn"><i class="fa-solid fa-phone"></i> 071 xxx xxx</li>
-                        <li id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></li>
-                        <li id="login-btn">Login</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- mobile menu -->
-            <div class="overlay-menu" style="display: none;">
-                <div class="left-menu">
-                    <a href="#" class="logo2"><img src="images/logo.png" alt=""></a>
-                    <div>
-                        <a href="#">Computer</a>
-                        <a href="#">Accessory</a>
-                        <a href="#">Spar Part</a>
-                        <a href="#">Cammera</a>
+      <div class="container">
+        <div class="nav-box">
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <div id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul class="menu-left">
+            <li><a href="#" class="active">Computer</a></li>
+            <li><a href="#">Accessory</a></li>
+            <li><a href="#">Spar Part</a></li>
+            <li><a href="#">Camera</a></li>
+          </ul>
+          <ul class="menu-right">
+            <li id="phone-btn">
+              <i class="fa-solid fa-phone"></i> 071 33 43 368
+            </li>
+            <li id="cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>(<span id="cart-qty">0</span>)</span>
+              <!-- cart products -->
+              <div class="cart-box">
+                <div class="cart">
+                  <div class="cart-item">
+                    <div class="cart-img">
+                      <img src="images/products/a1.jpg" alt="">
                     </div>
+                    <div>
+                      <div class="cart-name">product name</div>
+                      <div class="cart-qty">quantity: <span>1</span></div>
+                    </div>
+                  </div>
+                  <div class="delete-cart">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-            </div>
-            <!-- search box -->
-            <div class="search-box" style="display: none;">
-                <div class="search-input">
-                    <input type="text" placeholder="Search..." autofocus>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="cart">
+                  <div class="cart-item">
+                    <div class="cart-img">
+                      <img src="images/products/a1.jpg" alt="">
+                    </div>
+                    <div>
+                      <div class="cart-name">product name</div>
+                      <div class="cart-qty">quantity: <span>1</span></div>
+                    </div>
+                  </div>
+                  <div class="delete-cart">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-                <div class="close-search"><i class="fa-solid fa-xmark"></i></div>
-            </div>
-            <!-- form login -->
-            <div class="overlay-login" style="display: none;">
-                <div class="form-login">
-                    <span id="close-form"><i class="fa-solid fa-xmark"></i></span>
-                    <h3>Logincial Computer</h3>
-                    <h4>Dealer Login</h4>
-                    <form>
-                        <div>
-                            <label for="">Name</label>
-                            <input type="text" autofocus>
-                        </div>
-                        <div>
-                            <label for="">Password</label>
-                            <input type="password">
-                        </div>
-                        <input type="submit" value="Submit">
-                    </form>
+                <div class="cart">
+                  <div class="cart-item">
+                    <div class="cart-img">
+                      <img src="images/products/a1.jpg" alt="">
+                    </div>
+                    <div>
+                      <div class="cart-name">product name</div>
+                      <div class="cart-qty">quantity: <span>1</span></div>
+                    </div>
+                  </div>
+                  <div class="delete-cart">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-            </div>
-
+              </div>
+            </li>
+            <li id="search-btn" >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li id="login-btn">
+              Login
+            </li>
+          </ul>
         </div>
+        <!-- mobile menu -->
+        <div class="sidebar">
+          <a href="#" class="sidebar-logo">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <div class="sidebar-menu">
+            <a href="#">Computer</a>
+            <a href="#">Accessory</a>
+            <a href="#">Spar Part</a>
+            <a href="#">Cammera</a>
+            <a href="#" id="close-sidebar-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+        </div>
+        <!-- search box -->
+        <div class="search">
+          <div class="search-box">
+            <input type="text" placeholder="Web Developer..." autofocus />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="close-search-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <!-- form login -->
+        <div class="form-login">
+          <div class="login-box">
+            <span id="close-form-btn"><i class="fa-solid fa-xmark"></i></span>
+            <h3>Logincial Computer</h3>
+            <h4>Dealer Login</h4>
+            <form>
+              <div>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter name" autofocus/>
+              </div>
+              <div>
+                <label for="">Password</label>
+                <input type="password" placeholder="Enter password"/>
+              </div>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
     </nav>
+    <main>
+      <!-- Best Seller -->
+       <section id="best-seller">
+        <div class="container">
+          <div>
+            <div class="heading">
+              <h2>BEST SELLER</h2>
+              <H3>TOP PRODUCT OF THIS WEEK</H3>
+            </div>
+            <div class="product-box">
+              <!-- <div class="product">
+                <div class="product-img">
+                  <img src="https://lgc24.com/rean-web-admin/public/img/product/601a101521853_3bc3996a9670fc2801b7f6c59e205288.jpg" alt="">
+                </div>
+                <h3 class="product-name">Adapter Asus 20V 14A 280W (6.0*3.7) Original</h3>
+                <div class="price-box">
+                  <span class="price-cents">$66.00</span>
+                  <span class="price-cents-discount">$56.00</span>
+                </div>
+                <div class="product-footer">
+                  <button class="btn view"><i class="fa-solid fa-eye"></i> View</button>
+                  <button class="btn add-to-cart">Add To Cart</button>
+                </div>
+              </div> -->
+            </div>
+            <!-- <button class="more-btn">More...</button> -->
+          </div>
+        </div>
+       </section>
+    </main>
+    <!-- Detail -->
+     <div class="overlay-detail">
+      <div class="detail-box">
+          <div class="preview-img">
+            <div class="img-box">
+              <img src="images/products/a1.jpg" alt="">
+            </div>
+            <div class="img-list">
+              <img src="images/products/a1.jpg" alt="" width="50">
+              <img src="images/products/a2.jpg" alt="" width="50">
+              <img src="images/products/a3.jpg" alt="" width="50">
+            </div>
+          </div>
+          <div class="desc">
+              <h3>Detail Heading</h3>
+              <div>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+                <p>Learn code from zero.</p>
+              </div>
+          </div>
+      </div>
+     </div>
 
     <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
